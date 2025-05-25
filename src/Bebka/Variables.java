@@ -19,7 +19,8 @@ public class Variables
         // ScanAge();
         //ArithemeticOps();
         //CheckifNegative();
-        CheckifDual();
+        //CheckifDual();
+        LetterGrade();
     }
 
     public void PrintlnVariables()
@@ -102,4 +103,64 @@ public class Variables
         }
     }
 
+    public static void LetterGrade()
+    {
+        Scanner scanner =new Scanner(System.in);
+        System.out.println("Harf notunu öğrenmek istediğiniz notu giriniz");
+        int grade=0;
+        while (true)
+        {
+            if (scanner.hasNextInt()) {
+                grade = scanner.nextInt();
+                if (0 <= grade && grade <= 100) {
+                    break;
+                }
+                else {
+                    System.out.println("Not 1-100 araliginda olmalidir");
+
+                }
+            }
+
+            else
+            {
+                System.out.println("Bir sayi girilmelidir");
+                scanner.next();
+            }
+        }
+
+        switch (grade/10)
+        {
+            case 10:
+                System.out.println("Harf notu A");
+                break;
+
+
+            case 9:
+                System.out.println("Harf notu A");
+                break;
+
+            case 8:
+                System.out.println("Harf notu B");
+                break;
+
+            case 7:
+                System.out.println("Harf notu C");
+                break;
+
+
+            case 6:
+                System.out.println("Harf notu D");
+                break;
+
+            case 5:
+                System.out.println("Harf notu F");
+                break;
+
+            default:
+                System.out.println("Harf notu F");
+        }
+
+
+
+    }
 }
