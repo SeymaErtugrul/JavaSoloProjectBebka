@@ -23,8 +23,8 @@ public class Variables
        // LetterGrade();
       //  ForLoop();
         //WhileLoop();
-        ScanArray();
-
+       // ScanArray();
+FindBiggestNum();
     }
 
     public void PrintlnVariables()
@@ -194,5 +194,47 @@ public class Variables
          System.out.println(NumArray[i]);
         }
 
+    }
+
+    public  static  void  FindBiggestNum()
+    {
+        Scanner scanner =new Scanner(System.in);
+
+
+        System.out.println("Girilen sayilardan en buyugu belirlenecektir,ilk sayiyi giriniz");
+        while (!scanner.hasNextInt())
+        {
+            System.out.println("Lutfen bir sayi giriniz");
+            scanner.next();
+        }
+        int num1  =scanner.nextInt();
+        System.out.println("Ikinci sayiyi giriniz");
+        while (!scanner.hasNextInt())
+        {
+            System.out.println("Lutfen bir sayi giriniz");
+            scanner.next();
+        }
+        int num2=scanner.nextInt();
+        System.out.println("Ucuncu sayiyi giriniz");
+        while (!scanner.hasNextInt())
+        {
+            System.out.println("Lutfen bir sayi giriniz");
+            scanner.next();
+        }
+        int num3=scanner.nextInt();
+
+
+       boolean isBigger;
+       if (num1>num2 && num1>num3)
+       {
+           System.out.println("En buyuk sayi " + num1);
+       }
+       else if (num2>num3 && num2>num1)
+       {
+           System.out.println("En buyuk sayi " + num2);
+       }
+       else {
+           System.out.println("En buyuk sayi " + num3);
+       }
     }
 }
