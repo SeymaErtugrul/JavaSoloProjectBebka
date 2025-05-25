@@ -14,11 +14,12 @@ public class Variables
 
     public static void main(String[] args)
     {
-        Variables variables = new Variables();
+       // Variables variables = new Variables();
        // variables.PrintlnVariables();
         // ScanAge();
         //ArithemeticOps();
-        CheckifNegative();
+        //CheckifNegative();
+        CheckifDual();
     }
 
     public void PrintlnVariables()
@@ -82,6 +83,22 @@ public class Variables
         else
         {
             System.out.println("Sayi 0");
+        }
+    }
+
+    public static  void CheckifDual()
+    {
+        Scanner scanner =new Scanner(System.in);
+        System.out.println("Tek, cift mi olduğunu öğrenmek istediğiniz sayiyi giriniz");
+        int numb= scanner.nextInt();
+        int totalNumb=numb%2;
+        if (totalNumb==0)
+        {
+            System.out.println("Girdiginiz Sayi cift");
+        }
+        else
+        {
+            System.out.println("Girdiginiz Sayi tek");
         }
     }
 
