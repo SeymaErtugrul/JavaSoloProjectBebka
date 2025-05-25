@@ -1,7 +1,5 @@
 package Bebka;
-import java.sql.Time;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class Variables
 {
@@ -11,23 +9,24 @@ public class Variables
     char testvarChar='k';
     final int testfinalVar=77;
     String testvarString = "bebka";
-
+     static Scanner scanner =new Scanner(System.in);
     public static void main(String[] args)
     {
-       // Variables variables = new Variables();
-       // variables.PrintlnVariables();
-        // ScanAge();
-        //ArithemeticOps();
-        //CheckifNegative();
-        //CheckifDual();
-       // LetterGrade();
-      //  ForLoop();
-        //WhileLoop();
-       // ScanArray();
-FindBiggestNum();
+        // Variables variables = new Variables();
+        // variables.printlnVariables();
+        // scanAge();
+        //arithemeticOps();
+        // checkifNegative();
+        //checkifDual();
+        // letterGrade();
+        //forLoop();
+        //whileLoop();
+        // scanArray();
+        //findBiggestNum();
+        addUntilN();
     }
 
-    public void PrintlnVariables()
+    public void printlnVariables()
     {   System.out.println("Integer Değiskeni: "+ testvarInt);
         System.out.println("Double Değiskeni: "+ testvarDouble);
         System.out.println("Float Degiskeni: "+ testvarFloat);
@@ -36,10 +35,9 @@ FindBiggestNum();
         System.out.println("String Degisken:  "+ testvarString);
     }
 
-    public static void ScanAge()
+    public static void scanAge()
     {
-        Scanner scanner= new Scanner(System.in);
-
+        //Scanner scanner= new Scanner(System.in);
         System.out.println("Yaşınızı giriniz: ");
         while (!scanner.hasNextInt())
         {
@@ -55,7 +53,7 @@ FindBiggestNum();
         System.out.println("Yaşınız: " + age);
     }
 
-    public static void ArithemeticOps()
+    public static void arithemeticOps()
     {
         float numb1=58.78f;
         int numb2=99;
@@ -70,9 +68,9 @@ FindBiggestNum();
     }
 
 
-    public static void CheckifNegative()
+    public static void checkifNegative()
     {
-        Scanner scanner =new Scanner(System.in);
+        //Scanner scanner =new Scanner(System.in);
 
         System.out.println("Pozitif veya negatif mi olduğunu öğrenmek istediğiniz sayiyi giriniz");
         int numb= scanner.nextInt();
@@ -91,7 +89,7 @@ FindBiggestNum();
         }
     }
 
-    public static  void CheckifDual()
+    public static  void checkifDual()
     {
         Scanner scanner =new Scanner(System.in);
         System.out.println("Tek, cift mi olduğunu öğrenmek istediğiniz sayiyi giriniz");
@@ -107,9 +105,9 @@ FindBiggestNum();
         }
     }
 
-    public static void LetterGrade()
+    public static void letterGrade()
     {
-        Scanner scanner =new Scanner(System.in);
+        //Scanner scanner =new Scanner(System.in);
         System.out.println("Harf notunu öğrenmek istediğiniz notu giriniz");
         int grade=0;
         while (true)
@@ -168,7 +166,7 @@ FindBiggestNum();
 
     }
 
-    public static void ForLoop()
+    public static void forLoop()
     {
         for (int i=1; i<11; i++)
         {
@@ -176,7 +174,7 @@ FindBiggestNum();
         }
     }
 
-    public static void WhileLoop()
+    public static void whileLoop()
     {
         int num=10;
         while(num>=1)
@@ -186,7 +184,7 @@ FindBiggestNum();
         }
     }
 
-    public static void ScanArray(){
+    public static void scanArray(){
         String []NumArray={"code","java","debug","github","developer"};
 
         for (int i=0;i<5;i++)
@@ -196,11 +194,9 @@ FindBiggestNum();
 
     }
 
-    public  static  void  FindBiggestNum()
+    public  static  void findBiggestNum()
     {
         Scanner scanner =new Scanner(System.in);
-
-
         System.out.println("Girilen sayilardan en buyugu belirlenecektir,ilk sayiyi giriniz");
         while (!scanner.hasNextInt())
         {
@@ -236,5 +232,23 @@ FindBiggestNum();
        else {
            System.out.println("En buyuk sayi " + num3);
        }
+    }
+
+    public static void addUntilN()
+    {
+        System.out.println("Bir sayi giriniz:");
+
+        while (!scanner.hasNextInt())
+        {
+            System.out.println("sayi girilmeli:");
+            scanner.next();
+        }
+        int scanNum=scanner.nextInt();
+        int totalNum=0;
+        for (int i=0 ; i<=scanNum ;i++)
+        {
+            totalNum+=i;
+        }
+        System.out.println("1'den" + scanNum + " sayisina kadar olan sayilarin toplami: " + totalNum);
     }
 }
