@@ -20,7 +20,8 @@ public class Variables
         //ArithemeticOps();
         //CheckifNegative();
         //CheckifDual();
-        LetterGrade();
+       // LetterGrade();
+        ForLoop();
     }
 
     public void PrintlnVariables()
@@ -163,4 +164,13 @@ public class Variables
 
 
     }
+
+    public static void ForLoop()
+    {
+        for (int i=1; i<11; i++)
+        {
+                System.out.println(i);
+        }
+    }
+
 }
