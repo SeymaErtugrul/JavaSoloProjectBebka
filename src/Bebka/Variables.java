@@ -17,7 +17,8 @@ public class Variables
         Variables variables = new Variables();
        // variables.PrintlnVariables();
         // ScanAge();
-        ArithemeticOps();
+        //ArithemeticOps();
+        CheckifNegative();
     }
 
     public void PrintlnVariables()
@@ -61,4 +62,27 @@ public class Variables
         System.out.println(numb1 + " ve " + numb2 +" sayilarinin carpimi: "  +multNumb);
         System.out.println(numb1 + " sayisinin " + numb2 +" sayisina bolumu: "  +divideNumb);
     }
+
+
+    public static void CheckifNegative()
+    {
+        Scanner scanner =new Scanner(System.in);
+
+        System.out.println("Pozitif veya negatif mi olduğunu öğrenmek istediğiniz sayiyi giriniz");
+        int numb= scanner.nextInt();
+        if (numb>0)
+        {
+            System.out.println("Sayi pozitif");
+        }
+        else if(numb<0)
+        {
+            System.out.println("Sayi negatif");
+        }
+
+        else
+        {
+            System.out.println("Sayi 0");
+        }
+    }
+
 }
