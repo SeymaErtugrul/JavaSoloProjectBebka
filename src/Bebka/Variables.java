@@ -15,8 +15,9 @@ public class Variables
     public static void main(String[] args)
     {
         Variables variables = new Variables();
-        variables.PrintlnVariables();
-        ScanAge();
+       // variables.PrintlnVariables();
+        // ScanAge();
+        ArithemeticOps();
     }
 
     public void PrintlnVariables()
@@ -45,5 +46,19 @@ public class Variables
             throw new RuntimeException(e);
         }
         System.out.println("Yaşınız: " + age);
+    }
+
+    public static void ArithemeticOps()
+    {
+        float numb1=58.78f;
+        int numb2=99;
+        float sumNumb= numb1+numb2;
+        float subNumb=numb1-numb2;
+        float multNumb=numb1*numb2;
+        float divideNumb=numb1 / numb2;
+        System.out.println(numb1 + " ve " + numb2 +" sayilarinin toplami: "  +sumNumb);
+        System.out.println(numb1 + " sayisindan " + numb2 +" sayisinin çıkarimi: "  +subNumb);
+        System.out.println(numb1 + " ve " + numb2 +" sayilarinin carpimi: "  +multNumb);
+        System.out.println(numb1 + " sayisinin " + numb2 +" sayisina bolumu: "  +divideNumb);
     }
 }
