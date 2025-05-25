@@ -22,7 +22,8 @@ public class Variables
         //CheckifDual();
        // LetterGrade();
       //  ForLoop();
-        WhileLoop();
+        //WhileLoop();
+        ScanArray();
 
     }
 
@@ -185,4 +186,13 @@ public class Variables
         }
     }
 
+    public static void ScanArray(){
+        String []NumArray={"code","java","debug","github","developer"};
+
+        for (int i=0;i<5;i++)
+        {
+         System.out.println(NumArray[i]);
+        }
+
+    }
 }
