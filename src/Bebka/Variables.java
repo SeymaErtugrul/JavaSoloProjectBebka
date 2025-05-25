@@ -21,7 +21,9 @@ public class Variables
         //CheckifNegative();
         //CheckifDual();
        // LetterGrade();
-        ForLoop();
+      //  ForLoop();
+        WhileLoop();
+
     }
 
     public void PrintlnVariables()
@@ -170,6 +172,16 @@ public class Variables
         for (int i=1; i<11; i++)
         {
                 System.out.println(i);
+        }
+    }
+
+    public static void WhileLoop()
+    {
+        int num=10;
+        while(num>=1)
+        {
+            System.out.println(num);
+            num--;
         }
     }
 
